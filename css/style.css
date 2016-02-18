@@ -1,0 +1,475 @@
+/* 
+GENERAL STYLES AND HOMEPAGE
+*/
+
+html {
+    text-rendering: optimizeLegibility!important;
+    -webkit-font-smoothing: antialiased!important;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    line-height: 1.7;
+    color: #34495e;
+}
+
+.container-fluid {
+    background-color: #f0f2f4;
+}
+
+.container {
+    max-width: 850px;
+    position: relative;
+} 
+
+.container h1 {
+    font-weight: 300;
+    margin-bottom: 4rem;
+    letter-spacing: 0.1rem;
+    color: #34495e;
+    line-height: 1.3;
+    font-size: 3.2rem;
+}
+
+.container h1 a:active {
+    text-decoration: none;
+}
+
+.container h1 a:visited {
+    text-decoration: none;
+}
+
+@media (min-width: 768px) {
+        .container h1 {
+        font-size: 4rem;
+    }
+}
+
+.container h1 span {
+    color: #2980b9;
+}
+
+.container p {
+    font-weight: 300;
+    font-size: 1.8rem;
+    line-height: 1.9;
+}
+
+.container a {
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.container a:hover {  
+    color: #34495e;
+    text-decoration: none;
+}
+
+.navbar {
+    font-size: 1.8rem;
+    width: 100%;
+    clear: both;
+    margin: 2rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+        .navbar {
+        margin: 5rem 0 0 0;
+    }
+}
+
+.logo {
+    display: inline-block;
+    float: left;
+    color: #34495e;
+    margin-bottom: 1rem;
+}
+
+.logo a {
+    color: #34495e;
+}
+
+.logo a:hover {
+    color: #2980b9;
+}
+
+.navigation {
+    width: 100%;
+    text-align: left;
+    display: inline-block;
+}
+
+@media (min-width: 550px) {
+        .navigation {
+        float: right;
+        width: auto;
+        text-align: right;
+    }
+}
+
+.navigation a {
+    margin: 0 2rem 0 0;
+    font-weight: 300;
+    color: #34495e;
+    text-align: left;
+}
+
+@media (min-width: 550px) {
+        .navigation a {
+        margin: 0 0 0 4rem;
+    }
+}
+
+.navigation a:hover {
+    color: #2980b9;
+}
+
+header {
+    max-width: 60rem;
+    margin: 5rem 0 5rem 0;
+}
+
+@media (min-width: 768px) {
+        header {
+        margin: 8rem 0 10rem 0;
+    }
+}
+
+header img {
+    width: 40px;
+    height: auto;
+}
+
+header p {
+    font-size: 1.5rem !important;
+}
+
+@media (min-width: 768px) {
+        header p{
+        font-size: 1.8rem !important;
+    }
+}
+
+
+#selected_work {
+    width: 100%;
+    margin-top: 4rem;
+    padding: 0 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        #selected_work {
+        margin-top: 8rem;
+        padding: 0;
+    }
+}
+
+#works a {
+    display: block;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -o-transition: all .2s ease;
+}
+
+#works:hover a {
+    opacity: .2;
+}
+
+#works:hover .work_line:hover a:hover {
+    opacity: 1;
+}
+
+.work_line {
+    border-bottom: 1px solid #eee;
+    width: 100%;
+    height: 90px;
+}
+
+.work_line a {
+    text-decoration: none;
+}
+
+.project_title {
+    line-height: 90px;
+    float: left;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: left;
+    text-decoration: none;
+    color: #34495e;
+}
+
+.project_info {
+    line-height: 90px;
+    padding-left: 50%;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: left;
+    text-decoration: none;
+    color: #34495e;
+}
+
+@media (max-width: 480px) {
+        .project_info {
+        display: none !important;
+    }
+}
+
+
+@media (min-width: 768px) {
+        .project_title, .project_info {
+        font-size: 1.8rem !important;
+    }
+}
+
+#about {
+    margin-top: 8rem;
+    padding: 0 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        #about {
+        padding: 0;
+        margin-top: 15rem;
+    }
+}
+
+.about_title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #34495e;
+    padding-bottom: 20px;
+}
+
+.about_text p {
+    font-weight: 300;
+    font-size: 1.5rem !important;
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+        .about_title, .about_text p {
+        font-size: 1.8rem !important;
+    }
+}
+
+#services {
+    margin-top: 6rem;
+    padding: 0 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        #services {
+        padding: 0;
+        margin-top: 11rem;
+    }
+}
+
+.services_title {
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: #34495e;
+    padding-bottom: 20px;
+}
+
+.services_text {
+    font-weight: 300;
+    font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+        .services_title, .services_text {
+        font-size: 1.8rem !important;
+    }
+}
+
+.services_text ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services_text ul li {
+    padding-bottom: 3rem;
+}
+
+.services_text ul li:hover {
+    color: #2980b9;
+    cursor: default;
+}
+
+.footer {
+    margin-top: 4rem;
+    padding: 0 15px 7rem 15px;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 1.5rem;
+    line-height: 28px;
+}
+
+@media (min-width: 768px) {
+        .footer {
+        padding: 0 0 7rem 0;
+        margin-top: 11rem;
+    }
+}
+
+.footer a {
+    text-decoration: none;
+    color: #34495e;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.footer a:hover {
+    color: #2980b9;
+}
+.social a {
+    margin-right: 20px;
+    float: left;
+}
+.email {
+    float: left;
+}
+
+@media (min-width: 768px) {
+        .email {
+        float: right;
+    }
+}
+
+.imprint {
+    margin-top: 8rem;
+    padding: 0 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        .imprint {
+        padding: 0;
+    }
+}
+
+.medium-weight {
+    font-weight: 400;
+}
+
+/* 
+PORTFOLIO CASE STUDIES
+*/
+
+.project {
+    padding: 4rem 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        .project {
+        padding: 6rem 0 0 0;
+    }
+}
+
+.project p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    padding: 1.5rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+        .project p {
+        font-size: 1.8rem !important;
+    }
+}
+
+.project-logo-maler {
+    background-image: url('../malerbetrieb-stickel/malerbetrieb-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120px;
+    margin: 5rem 0 5rem 0;
+    width: 100%;
+}
+
+.project-logo-jre {
+    background-image: url('../jeunes-restaurateurs/jre-logo.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 120px;
+    margin: 5rem 0 5rem 0;
+    width: 100%;
+}
+
+.project-name h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 400;
+    font-size: 3rem;
+    color: #34495e;
+    line-height: 1.4;
+}
+
+.project-border {
+    border-bottom: 1px solid #d4d9e0;
+    max-width: 40%;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.project h3 {
+    margin: 7rem 0 2rem 0;
+    font-weight: 500;
+    font-size: 1.8rem;
+    color: #34495e;
+    text-transform: uppercase;
+}
+
+.project-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    padding: 2rem 0 1.5rem 0;
+}
+ 
+figcaption {
+  color: #92989d;
+}
+
+/* 
+BLOG LANDINGPAGE
+*/
+
+@media (min-width: 768px) {
+        .subpage {
+        margin: 4rem 0 6rem 0;
+    }
+}
+
+.newsletter{
+    margin: 5rem 0 0 0;
+}
+
+.date {
+    text-align: right;
+}
+
+/* 
+BLOG ARTICLE
+*/
+
+.article-page {
+    margin: 10rem 0 0 0;
+    max-width: none;
+}
+
+.article-page h1 {
+    line-height: 1.4;
+}
+
+.goback {
+    margin: 2rem 0 0 0;
+}
+
+@media (min-width: 768px) {
+        .goback {
+        margin: 4rem 0 0 0;
+    }
+}
