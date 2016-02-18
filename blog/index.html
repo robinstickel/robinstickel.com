@@ -1,11 +1,29 @@
 ---
 layout: default
-title: Hank Quinlan's Blog
+title: Design Thoughts & Personal Blog by Robin Stickel
+description: All articles are written by Robin Stickel. Mostly about design, sometimes more personal. But always high quality and with low frequency.
 ---
-	<h1>{{ page.title }}</h1>
-	<ul class="posts">
-
-	  {% for post in site.posts %}
-	    <li><span>{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
-	  {% endfor %}
-	</ul>
+	<header class="subpage">
+             <h1>Thoughts & Articles</h1>
+             <p>All posts and articles written by <a href="http://robinstickel.com" title="Portfolio of Robin Stickel">Robin Stickel</a>. Mostly about design, sometimes more personal. But always high quality and with low frequency.</p>
+        </header>
+      </div>
+      </div>
+      <div class="container">
+         <div id="selected_work">
+              <div id="works">
+              	  {% for post in site.posts %}
+                  <div class="work_line"> 
+                      <a href="{{ post.url }}">
+                      <div class="project_title">{{ post.title }}</div>
+                      <div class="project_info date">{{ post.date | date_to_string }}</div>
+                      </a>
+                  </div>
+                {% endfor %}	
+              </div>
+         </div>
+         <div class="newsletter">
+             <div class="project">
+                 <p>Don't want to miss an article? Make sure to <a href="#">subscribe to my newsletter. </a></p>
+             </div>
+         </div>
