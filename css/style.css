@@ -160,7 +160,7 @@ header p {
 
 @media (min-width: 768px) {
         #selected_work {
-        margin-top: 8rem;
+        margin-top: 4rem;
         padding: 0;
     }
 }
@@ -224,14 +224,14 @@ header p {
 }
 
 #about {
-    margin-top: 8rem;
+    margin-top: 4rem;
     padding: 0 15px 0 15px;
 }
 
 @media (min-width: 768px) {
         #about {
         padding: 0;
-        margin-top: 15rem;
+        margin-top: 6rem;
     }
 }
 
@@ -255,14 +255,14 @@ header p {
 }
 
 #services {
-    margin-top: 6rem;
+    margin-top: 4rem;
     padding: 0 15px 0 15px;
 }
 
 @media (min-width: 768px) {
         #services {
         padding: 0;
-        margin-top: 11rem;
+        margin-top: 6rem;
     }
 }
 
@@ -431,6 +431,14 @@ PORTFOLIO CASE STUDIES
  
 figcaption {
   color: #92989d;
+}
+
+/* 
+About me
+*/
+
+.about-me-img img {
+    max-width: 100%;
 }
 
 /* 
