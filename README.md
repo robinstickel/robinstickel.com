@@ -1,9 +1,7 @@
 robinstickel.com source
 =================================================
 
-This is the source for my personal website, blog and portfolio running at [robinstickel.com](http://robinstickel.com). All content is written by me, Robin Stickel. The site is built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](http://pages.github.com).
-
-See [GitHub Pages](http://pages.github.com) to learn how to publish your own site.
+This is the source for my personal website, blog and portfolio running at [robinstickel.com](http://robinstickel.com). All content is written by me, Robin Stickel. The site is built with [Jekyll](https://jekyllrb.com/) and hosted with [Uberspace](http://uberspace.de).
 
 License
 =======
