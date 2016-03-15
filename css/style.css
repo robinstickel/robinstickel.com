@@ -336,7 +336,7 @@ PORTFOLIO HOMEPAGE
     position: relative;
 }
 
-.img-hover span {
+.img-hover .hover-titel {
     position: absolute;
 	bottom: 0px;
 	left: 30px;
@@ -351,31 +351,31 @@ PORTFOLIO HOMEPAGE
 	opacity: 0;
 }
 
-.img-hover span h3 {
+.img-hover .hover-titel h3 {
     font-size: 2.2rem;
     font-weight: 300;
     line-height: 1.2;
 }
 
 @media (min-width: 768px) {
-        .img-hover span h3 {
+        .img-hover .hover-titel h3 {
         font-size: 3rem;
     }
 }
 
-.img-hover span p {
+.img-hover .hover-titel p {
     font-size: 1.2rem;
     font-weight: 500;
     text-transform: uppercase;
 }
 
 @media (min-width: 768px) {
-        .img-hover span p {
+        .img-hover .hover-titel p {
         font-size: 1.5rem;
     }
 }
 
-.img-hover:hover span {
+.img-hover:hover .hover-titel {
 	bottom: 1.5rem;
 	opacity: 1;
 }

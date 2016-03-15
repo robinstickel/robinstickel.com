@@ -1,4 +1,4 @@
 markdown: kramdown
-permalink: /blog/:title
+permalink: /blog/:title/
 gems:
   - jekyll-sitemap
