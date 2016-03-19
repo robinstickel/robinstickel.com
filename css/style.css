@@ -230,11 +230,6 @@ ABOUT ME
     padding-bottom: 3rem;
 }
 
-.services_text ul li:hover {
-    color: #2980b9;
-    cursor: default;
-}
-
 .about-me-img img {
     max-width: 100%;
 }
