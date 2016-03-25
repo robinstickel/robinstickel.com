@@ -592,3 +592,44 @@ BLOG ARTICLE
 .blog-article strong {
     font-weight: 400;
 }
+
+/* 
+PHOTOGRAPHY
+*/
+
+.photography-grid {
+    padding: 0 15px 0 15px;
+}
+
+@media (min-width: 768px) {
+        .photography-grid {
+        padding: 0;
+    }
+}
+
+.photography-item {
+    margin-top: 3rem;
+}
+
+/* Featherlight Fix */
+
+@media all { 
+ .featherlight .featherlight-content {
+  padding: 0;
+  border: none;
+
+  min-width: inherit;
+ }
+
+ .featherlight .featherlight-image {
+    max-width: 100%;  
+    border: 20px solid #fff;
+ }
+}
+
+@media only screen and (max-width: 1024px) {
+ .featherlight .featherlight-content {
+  padding: 0;
+  border: none;
+ }
+}
