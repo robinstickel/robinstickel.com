@@ -10,5 +10,6 @@ The following directories and their contents are Copyright Robin Stickel. You ma
 
 * _posts/
 * img/
+* photography/
 
 All other directories and files are MIT Licensed. Feel free to use the HTML and CSS as you please. If you do use them, a link back to [robinstickel.com](http://robinstickel.com) would be appreciated.
