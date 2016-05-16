@@ -593,6 +593,15 @@ BLOG ARTICLE
     font-weight: 400;
 }
 
+.blog-article ul {
+    margin: 4rem 0 3rem 0;
+}
+
+.blog-article ul li{
+    font-size: 1.8rem;
+    line-height: 2;
+}
+
 /* 
 PHOTOGRAPHY
 */
