@@ -1,4 +1,4 @@
-/* 
+/*
 GENERAL STYLES
 */
 
@@ -21,7 +21,7 @@ body {
 .container {
     max-width: 960px;
     position: relative;
-} 
+}
 
 .container h1 {
     font-weight: 300;
@@ -61,12 +61,12 @@ body {
     transition: .3s;
 }
 
-.container a:hover {  
+.container a:hover {
     color: #34495e;
     text-decoration: none;
 }
 
-/* 
+/*
 NAVIGATION
 */
 
@@ -131,7 +131,7 @@ NAVIGATION
     }
 }
 
-/* 
+/*
 HEADER
 */
 
@@ -156,7 +156,7 @@ header p {
     }
 }
 
-/* 
+/*
 ABOUT ME
 */
 
@@ -234,7 +234,7 @@ ABOUT ME
     max-width: 100%;
 }
 
-/* 
+/*
 FOOTER
 */
 
@@ -292,7 +292,7 @@ FOOTER
     font-weight: 400;
 }
 
-/* 
+/*
 PORTFOLIO HOMEPAGE
 */
 
@@ -396,7 +396,7 @@ PORTFOLIO HOMEPAGE
 	opacity: 0;
 }
 
-/* 
+/*
 PORTFOLIO CASE STUDIES
 */
 
@@ -435,7 +435,7 @@ PORTFOLIO CASE STUDIES
     width: 100%;
     height: auto;
 }
- 
+
 .project figcaption {
     color: #92989d;
 }
@@ -444,7 +444,7 @@ PORTFOLIO CASE STUDIES
     margin: 2rem 0 4rem 0;
 }
 
-/* 
+/*
 BLOG LANDINGPAGE
 */
 
@@ -506,6 +506,11 @@ BLOG LANDINGPAGE
     color: #34495e;
 }
 
+.project img {
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 480px) {
         .project_info {
         display: none !important;
@@ -548,7 +553,7 @@ BLOG LANDINGPAGE
     text-align: right;
 }
 
-/* 
+/*
 BLOG ARTICLE
 */
 
@@ -602,7 +607,7 @@ BLOG ARTICLE
     line-height: 2;
 }
 
-/* 
+/*
 PHOTOGRAPHY
 */
 
@@ -622,7 +627,7 @@ PHOTOGRAPHY
 
 /* Featherlight Fix */
 
-@media all { 
+@media all {
  .featherlight .featherlight-content {
   padding: 0;
   border: none;
@@ -631,7 +636,7 @@ PHOTOGRAPHY
  }
 
  .featherlight .featherlight-image {
-    max-width: 100%;  
+    max-width: 100%;
     border: 20px solid #fff;
  }
 }
