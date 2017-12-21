@@ -1,4 +1,0 @@
-markdown: kramdown
-permalink: /blog/:title/
-gems:
-  - jekyll-sitemap
