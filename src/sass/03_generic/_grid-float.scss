@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    GRID FLOAT
+
+    grid float variation
+\*------------------------------------*/
+
+@mixin grid-float() {
+  .row {
+    margin-right: -$grid-gutter-width/2;
+    margin-left: -$grid-gutter-width/2;
+  }
+  $grid-classes: '';
+  @for $i from 1 through $grid-columns {
+    $grid-classes: $grid-classes+'.col-#{$i}, .col-xl-#{$i}, .col-lg-#{$i}, .col-md-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, ';
+  }
+  #{$grid-classes} {
+    @include grid-float-basics();
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-float-col($i);
+    }
+  }
+  @for $i from 0 through $grid-columns {
+    .col-offset-#{$i} {
+      margin-left: #{($i / $grid-columns) * 100%};
+    }
+  }
+  @each $device,
+  $screen-device in (xl, $screen-xl),
+  (lg, $screen-lg),
+  (md, $screen-md),
+  (sm, $screen-sm),
+  (xs, $screen-xs) {
+    @media #{$screen-device} {
+      @for $i from 1 through $grid-columns {
+        .col-#{$device}-#{$i} {
+          @include grid-float-col($i);
+        }
+      }
+      @for $i from 0 through $grid-columns {
+        .col-#{$device}-offset-#{$i} {
+          margin-left: #{($i / $grid-columns) * 100%};
+        }
+      }
+    }
+  }
+  .container:before,
+  .container:after,
+  .container-fluid:before,
+  .container-fluid:after,
+  .row:before,
+  .row:after {
+    content: " ";
+    display: table;
+  }
+  .container:after,
+  .container-fluid:after,
+  .row:after {
+    clear: both;
+  }
+  @media only screen and (max-width: $page-max-size+$grid-gutter-width) {
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@mixin grid-float-basics {
+  min-height: 1px;
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
+  float: left;
+  position: relative;
+}
+
+@mixin grid-float-col($i) {
+  width: #{($i / $grid-columns) * 100%};
+}

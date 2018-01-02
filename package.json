@@ -1,0 +1,49 @@
+{
+  "name": "startertkit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "node ./postinstall.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/mecompany/startertkit.git"
+  },
+  "author": "mecompany",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/mecompany/startertkit#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "browser-sync": "^2.18.13",
+    "del": "^3.0.0",
+    "fs": "0.0.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.1",
+    "gulp-file-include": "^1.2.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-replace": "^0.6.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "imagemin-jpegoptim": "^5.1.0",
+    "imagemin-jpegtran": "^5.0.2",
+    "imagemin-mozjpeg": "^6.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "jquery": "^3.2.1"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0",
+    "glob": "^7.1.1",
+    "imagemin-svgo": "^5.2.0",
+    "normalize.css": "^7.0.0"
+  }
+}

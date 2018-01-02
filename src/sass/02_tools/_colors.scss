@@ -1,0 +1,50 @@
+@function brightness($color, $tone) {
+  // brightness 1x
+  @if $tone=='dark' {
+    @return darken($color, $color-brightness-step);
+  }
+  @else if $tone=='light' {
+    @return lighten($color, $color-brightness-step);
+  }
+
+  // brightness 2x
+  @else if $tone=='x-dark' {
+    @return darken($color, $color-brightness-step * 2);
+  }
+  @else if $tone=='x-light' {
+    @return lighten($color, $color-brightness-step * 2);
+  }
+
+  // brightness 3x
+  @else if $tone=='xx-dark' {
+    @return darken($color, $color-brightness-step * 3);
+  }
+  @else if $tone=='xx-light' {
+    @return lighten($color, $color-brightness-step * 3);
+  }
+
+  // brightness 4x
+  @else if $tone=='xxx-dark' {
+    @return darken($color, $color-brightness-step * 4);
+  }
+  @else if $tone=='xxx-light' {
+    @return lighten($color, $color-brightness-step * 4);
+  }
+
+  // base
+  @return $color;
+}
+
+@function color($color, $tone: 'base') {
+  @if type-of(map-get($colors, $color)) !=color {
+    @if type-of(map-get(map-get($colors, $color), $tone)) !=color {
+      @return brightness(map-get(map-get($colors, $color), 'base'), $tone);
+    }
+    @else {
+      @return map-get(map-get($colors, $color), $tone);
+    }
+  }
+  @else {
+    @return brightness(map-get($colors, $color), $tone);
+  }
+}

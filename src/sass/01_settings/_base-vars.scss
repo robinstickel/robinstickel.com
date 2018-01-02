@@ -1,0 +1,30 @@
+/*------------------------------------*\
+    VARS
+
+    basic vars
+\*------------------------------------*/
+
+$base-line-height: 1.5;
+$base-font-family: Arial, Helvetica, sans-serif;
+$base-letter-spacing: 1.3px;
+
+
+/*------------------------------------*\
+    SIZING & SPACING
+    
+    
+\*------------------------------------*/
+
+/*
+** PAGE SIZES
+*/
+
+$page-max-size: 920px;
+
+
+/*
+** SPACING RHYTHM
+*/
+
+$base-spacing: 4px;
+$baseline: $base-line-height * 1rem;

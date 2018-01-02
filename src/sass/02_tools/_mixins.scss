@@ -1,0 +1,110 @@
+@mixin breakpoint($breakpoint) {
+
+    /**
+        CONTENT BASED MEDIA QUERIES
+    **/
+
+    @if is-absolute-length($breakpoint) {
+        @media only screen and (max-width: $breakpoint) {
+            @content;
+        }
+    }
+
+    /**
+        DEVICE BASED MEDIA QUERIES
+    **/
+
+    @else {
+
+        /**
+            MEDIA QUERIES UP TO DOWN
+            lg -> for lg and below
+            except xl: xl and above
+        **/
+
+        @if $breakpoint == 'xl' {
+            @media only screen and (max-width: $breakpoint-lg + 1) {
+                @content;
+            }
+        }
+        @if $breakpoint == 'lg' {
+            @media only screen and (max-width: $breakpoint-lg) {
+                @content;
+            };
+        }
+        @else if $breakpoint == 'md' {
+            @media only screen and (max-width: $breakpoint-md) {
+                @content;
+            };
+        }
+        @else if $breakpoint == 'sm' {
+            @media only screen and (max-width: $breakpoint-sm) {
+                @content;
+            };
+        }
+        @else if $breakpoint == 'xs' {
+            @media only screen and (max-width: $breakpoint-xs) {
+                @content;
+            };
+        }
+
+
+
+        /**
+            MEDIA QUERIES FOR ONLY ONE RANGE
+        **/
+
+        // md <----> lg
+        @else if $breakpoint == 'only-lg' {
+            @media only screen and (min-width: $breakpoint-md + 1) and (max-width: $breakpoint-lg) {
+                @content;
+            }
+        }
+
+        // sm <----> md
+        @else if $breakpoint == 'only-md' {
+            @media only screen and (min-width: $breakpoint-sm + 1) and (max-width: $breakpoint-md) {
+                @content;
+            }
+        }
+
+        // xs <----> sm
+        @else if $breakpoint == 'only-sm' {
+            @media only screen and (min-width: $breakpoint-xs + 1) and (max-width: $breakpoint-sm) {
+                @content;
+            }
+        }
+
+
+
+        /**
+            MEDIA QUERIES DOWN TO UP
+            lg -> for lg and above
+        **/
+
+        @else if $breakpoint == 'lg-and-up' {
+            @media only screen and (min-width: $breakpoint-lg) {
+                @content;
+            }
+        }
+
+        @else if $breakpoint == 'md-and-up' {
+            @media only screen and (min-width: $breakpoint-md) {
+                @content;
+            }
+        }
+
+        @else if $breakpoint == 'sm-and-up' {
+            @media only screen and (min-width: $breakpoint-sm) {
+                @content;
+            }
+        }
+
+        @else if $breakpoint == 'xs-and-up' {
+            @media only screen and (min-width: $breakpoint-xs) {
+                @content;
+            }
+        }
+    }
+}
+

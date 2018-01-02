@@ -1,0 +1,480 @@
+@for $i from 0 through 10 {
+  .pt-#{$i} {
+    padding-top: $baseline * $i !important;
+  }
+  .pr-#{$i} {
+    padding-right: $base-spacing * $i !important;
+  }
+  .pb-#{$i} {
+    padding-bottom: $baseline * $i !important;
+  }
+  .pl-#{$i} {
+    padding-left: $base-spacing * $i !important;
+  }
+  .mt-#{$i} {
+    margin-top: $baseline * $i !important;
+  }
+  .mr-#{$i} {
+    margin-right: $base-spacing * $i !important;
+  }
+  .mb-#{$i} {
+    margin-bottom: $baseline * $i !important;
+  }
+  .ml-#{$i} {
+    margin-left: $base-spacing * $i !important;
+  }
+  .n-mt-#{$i} {
+    margin-top: -1 * $baseline * $i !important;
+  }
+  .n-mr-#{$i} {
+    margin-right: -1 * $base-spacing * $i !important;
+  }
+  .n-mb-#{$i} {
+    margin-bottom: -1 * $baseline * $i !important;
+  }
+  .n-ml-#{$i} {
+    margin-left: -1 * $base-spacing * $i !important;
+  }
+}
+
+
+/*
+** MEDIA QUERIES
+*/
+
+@for $i from 0 through 10 {
+  @include breakpoint(lg) {
+    .pt-lg-#{$i} {
+      padding-top: $baseline * $i !important;
+    }
+    .pr-lg-#{$i} {
+      padding-right: $base-spacing * $i !important;
+    }
+    .pb-lg-#{$i} {
+      padding-bottom: $baseline * $i !important;
+    }
+    .pl-lg-#{$i} {
+      padding-left: $base-spacing * $i !important;
+    }
+    .mt-lg-#{$i} {
+      margin-top: $baseline * $i !important;
+    }
+    .mr-lg-#{$i} {
+      margin-right: $base-spacing * $i !important;
+    }
+    .mb-lg-#{$i} {
+      margin-bottom: $baseline * $i !important;
+    }
+    .ml-lg-#{$i} {
+      margin-left: $base-spacing * $i !important;
+    }
+    .n-mt-lg-#{$i} {
+      margin-top: -1 * $baseline * $i !important;
+    }
+    .n-mr-lg-#{$i} {
+      margin-right: -1 * $base-spacing * $i !important;
+    }
+    .n-mb-lg-#{$i} {
+      margin-bottom: -1 * $baseline * $i !important;
+    }
+    .n-ml-lg-#{$i} {
+      margin-left: -1 * $base-spacing * $i !important;
+    }
+  }
+}
+
+@for $i from 0 through 10 {
+  @include breakpoint(md) {
+    .pt-md-#{$i} {
+      padding-top: $baseline * $i !important;
+    }
+    .pr-md-#{$i} {
+      padding-right: $base-spacing * $i !important;
+    }
+    .pb-md-#{$i} {
+      padding-bottom: $baseline * $i !important;
+    }
+    .pl-md-#{$i} {
+      padding-left: $base-spacing * $i !important;
+    }
+    .mt-md-#{$i} {
+      margin-top: $baseline * $i !important;
+    }
+    .mr-md-#{$i} {
+      margin-right: $base-spacing * $i !important;
+    }
+    .mb-md-#{$i} {
+      margin-bottom: $baseline * $i !important;
+    }
+    .ml-md-#{$i} {
+      margin-left: $base-spacing * $i !important;
+    }
+    .n-mt-md-#{$i} {
+      margin-top: -1 * $baseline * $i !important;
+    }
+    .n-mr-md-#{$i} {
+      margin-right: -1 * $base-spacing * $i !important;
+    }
+    .n-mb-md-#{$i} {
+      margin-bottom: -1 * $baseline * $i !important;
+    }
+    .n-ml-md-#{$i} {
+      margin-left: -1 * $base-spacing * $i !important;
+    }
+  }
+}
+
+@for $i from 0 through 10 {
+  @include breakpoint(sm) {
+    .pt-sm-#{$i} {
+      padding-top: $baseline * $i !important;
+    }
+    .pr-sm-#{$i} {
+      padding-right: $base-spacing * $i !important;
+    }
+    .pb-sm-#{$i} {
+      padding-bottom: $baseline * $i !important;
+    }
+    .pl-sm-#{$i} {
+      padding-left: $base-spacing * $i !important;
+    }
+    .mt-sm-#{$i} {
+      margin-top: $baseline * $i !important;
+    }
+    .mr-sm-#{$i} {
+      margin-right: $base-spacing * $i !important;
+    }
+    .mb-sm-#{$i} {
+      margin-bottom: $baseline * $i !important;
+    }
+    .ml-sm-#{$i} {
+      margin-left: $base-spacing * $i !important;
+    }
+    .n-mt-sm-#{$i} {
+      margin-top: -1 * $baseline * $i !important;
+    }
+    .n-mr-sm-#{$i} {
+      margin-right: -1 * $base-spacing * $i !important;
+    }
+    .n-mb-sm-#{$i} {
+      margin-bottom: -1 * $baseline * $i !important;
+    }
+    .n-ml-sm-#{$i} {
+      margin-left: -1 * $base-spacing * $i !important;
+    }
+  }
+}
+
+@for $i from 0 through 10 {
+  @include breakpoint(xs) {
+    .pt-xs-#{$i} {
+      padding-top: $baseline * $i !important;
+    }
+    .pr-xs-#{$i} {
+      padding-right: $base-spacing * $i !important;
+    }
+    .pb-xs-#{$i} {
+      padding-bottom: $baseline * $i !important;
+    }
+    .pl-xs-#{$i} {
+      padding-left: $base-spacing * $i !important;
+    }
+    .mt-xs-#{$i} {
+      margin-top: $baseline * $i !important;
+    }
+    .mr-xs-#{$i} {
+      margin-right: $base-spacing * $i !important;
+    }
+    .mb-xs-#{$i} {
+      margin-bottom: $baseline * $i !important;
+    }
+    .ml-xs-#{$i} {
+      margin-left: $base-spacing * $i !important;
+    }
+    .n-mt-xs-#{$i} {
+      margin-top: -1 * $baseline * $i !important;
+    }
+    .n-mr-xs-#{$i} {
+      margin-right: -1 * $base-spacing * $i !important;
+    }
+    .n-mb-xs-#{$i} {
+      margin-bottom: -1 * $baseline * $i !important;
+    }
+    .n-ml-xs-#{$i} {
+      margin-left: -1 * $base-spacing * $i !important;
+    }
+  }
+}
+
+@each $key,
+$value in $spacing {
+  .pt-#{$key} {
+    padding-top: spacing($key);
+  }
+  .pr-#{$key} {
+    padding-right: spacing($key);
+  }
+  .pb-#{$key} {
+    padding-bottom: spacing($key);
+  }
+  .pl-#{$key} {
+    padding-left: spacing($key);
+  }
+  .text-pt-#{$key} {
+    padding-top: text-spacing($key);
+  }
+  .text-pb-#{$key} {
+    padding-bottom: text-spacing($key);
+  }
+  .mt-#{$key} {
+    margin-top: spacing($key);
+  }
+  .mr-#{$key} {
+    margin-right: spacing($key);
+  }
+  .mb-#{$key} {
+    margin-bottom: spacing($key);
+  }
+  .ml-#{$key} {
+    margin-left: spacing($key);
+  }
+  .text-mt-#{$key} {
+    margin-top: text-spacing($key);
+  }
+  .text-mb-#{$key} {
+    margin-bottom: text-spacing($key);
+  }
+  .n-mt-#{$key} {
+    margin-top: -1 * spacing($key);
+  }
+  .n-mr-#{$key} {
+    margin-right: -1 * spacing($key);
+  }
+  .n-mb-#{$key} {
+    margin-bottom: -1 * spacing($key);
+  }
+  .n-ml-#{$key} {
+    margin-left: -1 * spacing($key);
+  }
+}
+
+
+/*
+** MEDIA QUERIES
+*/
+
+@each $key,
+$value in $spacing {
+  @include breakpoint(lg) {
+    .pt-lg-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-lg-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-lg-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-lg-#{$key} {
+      padding-left: spacing($key);
+    }
+    .text-pt-lg-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-lg-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+    .mt-lg-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-lg-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-lg-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-lg-#{$key} {
+      margin-left: spacing($key);
+    }
+    .text-mt-lg-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-lg-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+    .n-mt-lg-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-lg-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-lg-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-lg-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key,
+$value in $spacing {
+  @include breakpoint(md) {
+    .pt-md-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-md-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-md-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-md-#{$key} {
+      padding-left: spacing($key);
+    }
+    .text-pt-md-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-md-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+    .mt-md-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-md-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-md-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-md-#{$key} {
+      margin-left: spacing($key);
+    }
+    .text-mt-md-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-md-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+    .n-mt-md-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-md-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-md-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-md-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key,
+$value in $spacing {
+  @include breakpoint(sm) {
+    .pt-sm-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-sm-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-sm-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-sm-#{$key} {
+      padding-left: spacing($key);
+    }
+    .text-pt-sm-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-sm-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+    .mt-sm-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-sm-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-sm-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-sm-#{$key} {
+      margin-left: spacing($key);
+    }
+    .text-mt-sm-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-sm-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+    .n-mt-sm-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-sm-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-sm-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-sm-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}
+
+@each $key,
+$value in $spacing {
+  @include breakpoint(xs) {
+    .pt-xs-#{$key} {
+      padding-top: spacing($key);
+    }
+    .pr-xs-#{$key} {
+      padding-right: spacing($key);
+    }
+    .pb-xs-#{$key} {
+      padding-bottom: spacing($key);
+    }
+    .pl-xs-#{$key} {
+      padding-left: spacing($key);
+    }
+    .text-pt-xs-#{$key} {
+      padding-top: text-spacing($key);
+    }
+    .text-pb-xs-#{$key} {
+      padding-bottom: text-spacing($key);
+    }
+    .mt-xs-#{$key} {
+      margin-top: spacing($key);
+    }
+    .mr-xs-#{$key} {
+      margin-right: spacing($key);
+    }
+    .mb-xs-#{$key} {
+      margin-bottom: spacing($key);
+    }
+    .ml-xs-#{$key} {
+      margin-left: spacing($key);
+    }
+    .text-mt-xs-#{$key} {
+      margin-top: text-spacing($key);
+    }
+    .text-mb-xs-#{$key} {
+      margin-bottom: text-spacing($key);
+    }
+    .n-mt-xs-#{$key} {
+      margin-top: -1 * spacing($key);
+    }
+    .n-mr-xs-#{$key} {
+      margin-right: -1 * spacing($key);
+    }
+    .n-mb-xs-#{$key} {
+      margin-bottom: -1 * spacing($key);
+    }
+    .n-ml-xs-#{$key} {
+      margin-left: -1 * spacing($key);
+    }
+  }
+}

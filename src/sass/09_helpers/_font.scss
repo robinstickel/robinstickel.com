@@ -1,0 +1,25 @@
+.font-bold {
+  font-weight: bold;
+}
+
+.font-normal {
+  font-weight: normal;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-lighter {
+  font-weight: lighter;
+}
+
+@each $screen,
+$sizes in $font-sizes {
+  @each $size,
+  $value in $sizes {
+    .font-#{$size}-#{$screen} {
+      @include font-size($size, $screen, false);
+    }
+  }
+}

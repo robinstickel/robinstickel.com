@@ -1,0 +1,72 @@
+/*------------------------------------*\
+    GRID INLINEBLOCK
+
+    grid inline-block variation
+\*------------------------------------*/
+
+@mixin grid-inlineblock() {
+  .row {
+    margin-right: -$grid-gutter-width/2;
+    margin-left: -$grid-gutter-width/2;
+    letter-spacing: -0.31em;
+  }
+  $grid-classes: '';
+  @for $i from 1 through $grid-columns {
+    $grid-classes: $grid-classes+'.col-#{$i}, .col-xl-#{$i}, .col-lg-#{$i}, .col-md-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, ';
+  }
+  #{$grid-classes} {
+    @include grid-inlineblock-basics();
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-inlineblock-col($i);
+    }
+  }
+  @for $i from 0 through $grid-columns {
+    .col-offset-#{$i} {
+      margin-left: #{($i / $grid-columns) * 100%};
+    }
+  }
+  @each $device,
+  $screen-device in (xl, $screen-xl),
+  (lg, $screen-lg),
+  (md, $screen-md),
+  (sm, $screen-sm),
+  (xs, $screen-xs) {
+    @media #{$screen-device} {
+      @for $i from 1 through $grid-columns {
+        .col-#{$device}-#{$i} {
+          @include grid-inlineblock-col($i);
+        }
+      }
+      @for $i from 0 through $grid-columns {
+        .col-#{$device}-offset-#{$i} {
+          margin-left: #{($i / $grid-columns) * 100%};
+        }
+      }
+    }
+  }
+  /* Opera hack */
+  .opera:-o-prefocus,
+  .row {
+    word-spacing: -0.43em;
+  }
+  @media only screen and (max-width: $page-max-size+$grid-gutter-width) {
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@mixin grid-inlineblock-basics {
+  padding-right: $grid-gutter-width/2;
+  padding-left: $grid-gutter-width/2;
+  letter-spacing: normal;
+  word-spacing: normal;
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin grid-inlineblock-col($i) {
+  width: #{($i / $grid-columns) * 100%};
+}

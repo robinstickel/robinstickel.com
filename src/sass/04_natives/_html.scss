@@ -1,0 +1,8 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: $base-font-family;
+  @include font-size(base);
+}

@@ -1,0 +1,74 @@
+@mixin font-size($size, $viewport: 'lg', $responsive: true) {
+    @if $responsive == true {
+        $next-font-size-set: false;
+
+        @for $i from 1 through length($font-sizes) {
+            $view: nth($font-sizes, $i);
+            $viewport: nth($view, 1);
+            
+            $vw-font-size: strip-unit( ( nth(map-get(map-get($font-sizes, $viewport), $size), 1) / (map-get($breakpoints, $viewport) ) * 100) );
+            $max-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1) / ($vw-font-size / 100);
+
+            // Set default font-size & line-height without media query
+            @if ($i == 1) {
+                font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);              
+            }
+
+            // If font-size / vw-font-size > breakpoint
+            @if ($max-size > map-get($breakpoints, $viewport)) {
+                @if ($i > 1) {
+                    @media (max-width: $max-size) {
+                        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        color: red;
+                        z-index: $i;
+                    }
+                }
+            }
+            @else {
+                @if $next-font-size-set == false {
+                    @media (max-width: map-get($breakpoints, $viewport)) {
+                        @if ($i == length($font-sizes)) {
+                            font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        }
+                        @else {
+                            font-size: $vw-font-size#{vw};
+                        }
+                        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        color: blue;
+                        z-index: $i;
+                    }
+                }
+            }
+
+            // Check if next font-size (sm, xs) max-size and compare to this vw-font-size
+            @if (length($font-sizes) > $i) {
+                $n_view: nth($font-sizes, $i + 1);
+                $n_viewport: nth($n_view, 1);
+                $n_max-size: nth(map-get(map-get($font-sizes, $n_viewport), $size), 1) / ($vw-font-size / 100);
+
+                @if ($n_max-size > map-get($breakpoints, $n_viewport) && $n_max-size < $max-size) {
+                    $next-font-size-set: true;
+                    @media (max-width: $n_max-size) {
+                        font-size: nth(map-get(map-get($font-sizes, $n_viewport), $size), 1);
+                        line-height: nth(map-get(map-get($font-sizes, $n_viewport), $size), 2) / nth(map-get(map-get($font-sizes, $n_viewport), $size), 1);
+                        color: magenta;
+                        z-index: $i;
+                    }
+                }
+                @else {
+                    $next-font-size-set: false;
+                }
+            }
+        }
+    }
+    @else {
+        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+    }
+}
+
+@mixin baseline-responsive($size, $viewport: 'lg') {
+
+}

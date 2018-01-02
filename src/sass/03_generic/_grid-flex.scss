@@ -1,0 +1,79 @@
+/*------------------------------------*\
+    GRID FLEXBOX
+
+    grid flexbox variation
+\*------------------------------------*/
+
+@mixin grid-flex {
+  .container-fluid {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+  .row {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: -$grid-gutter-width/2;
+    margin-left: -$grid-gutter-width/2;
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+  }
+  $grid-classes: '';
+  @for $i from 1 through $grid-columns {
+    $grid-classes: $grid-classes+'.col-#{$i}, .col-xl-#{$i}, .col-lg-#{$i}, .col-md-#{$i}, .col-sm-#{$i}, .col-xs-#{$i}, ';
+  }
+  #{$grid-classes} {
+    @include grid-flex-basics();
+  }
+  @for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      @include grid-flex-col($i);
+    }
+  }
+  @for $i from 0 through $grid-columns {
+    .col-offset-#{$i} {
+      margin-left: #{($i / $grid-columns) * 100%};
+    }
+  }
+  @each $device,
+  $screen-device in (xl, $screen-xl),
+  (lg, $screen-lg),
+  (md, $screen-md),
+  (sm, $screen-sm),
+  (xs, $screen-xs) {
+    @media #{$screen-device} {
+      @for $i from 1 through $grid-columns {
+        .col-#{$device}-#{$i} {
+          @include grid-flex-col($i);
+        }
+      }
+      @for $i from 0 through $grid-columns {
+        .col-#{$device}-offset-#{$i} {
+          margin-left: #{($i / $grid-columns) * 100%};
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: $page-max-size+$grid-gutter-width) {
+    .row {
+      margin: 0;
+    }
+  }
+}
+
+@mixin grid-flex-basics() {
+  padding-left: $grid-gutter-width/2;
+  padding-right: $grid-gutter-width/2;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+}
+
+@mixin grid-flex-col($i) {
+  flex-basis: #{($i / $grid-columns) * 100%};
+  max-width: #{($i / $grid-columns) * 100%};
+}

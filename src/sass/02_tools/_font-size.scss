@@ -1,0 +1,64 @@
+@mixin font-size($size, $viewport: 'lg', $responsive: true) {
+    @if ($responsive == true) {
+        // Default font-size and line-height
+        $viewport: 'lg';
+        $next-set: 0;
+
+        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+
+
+        // Go trough all font-sizes
+        @for $i from 1 through length($font-sizes) {
+            $view: nth($font-sizes, $i);
+            $viewport: nth($view, 1);
+            $vw-font-size: strip-unit( ( nth(map-get(map-get($font-sizes, $viewport), $size), 1) / (map-get($breakpoints, $viewport) ) * 100) );
+            $max-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1) / ($vw-font-size / 100);
+
+            // not already the smallest font?
+            @if ($i < length($font-sizes)) {
+                @media(max-width: $max-size) {
+                    font-size: $vw-font-size#{vw};
+                    line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                }
+
+                @if ($max-size < strip-unit(map-get($breakpoints, $viewport))) {
+                    @media (max-width: map-get($breakpoints, $viewport)) {
+                        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                    }
+                }
+
+                $next_view: nth($font-sizes, $i + 1);
+                $next_viewport: nth($next_view, 1);
+                $next_vw-font-size: strip-unit( ( nth(map-get(map-get($font-sizes, $next_viewport), $size), 1) / (map-get($breakpoints, $next_viewport) ) * 100) );
+                $next_max-size: nth(map-get(map-get($font-sizes, $next_viewport), $size), 1) / ($vw-font-size / 100);
+
+                @if ($next_vw-font-size > $vw-font-size) {
+                    $next-set: $i + 1;
+                    @media(max-width: $next_max-size) {
+                        font-size: nth(map-get(map-get($font-sizes, $next_viewport), $size), 1);
+                        line-height: nth(map-get(map-get($font-sizes, $next_viewport), $size), 2) / nth(map-get(map-get($font-sizes, $next_viewport), $size), 1);
+                    }
+                }
+            }
+            @else {
+                // Is this font-size already set?
+                @if ($next-set < $i) {
+                    // Minimum font-size and line-height
+                    $view: nth($font-sizes, $i);
+                    $viewport: nth($view, 1);
+
+                    @media (max-width: map-get($breakpoints, $viewport)) {
+                        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+                    }
+                }
+            }
+        }
+    }
+    @else {
+        font-size: nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+        line-height: nth(map-get(map-get($font-sizes, $viewport), $size), 2) / nth(map-get(map-get($font-sizes, $viewport), $size), 1);
+    }
+}
