@@ -1,0 +1,12 @@
+.social-links {
+  list-style-type: none;
+
+  li {
+    display: inline-block;
+    margin-left: spacing(l);
+
+    &:first-of-type {
+      margin-left: 0;
+    }
+  }
+}

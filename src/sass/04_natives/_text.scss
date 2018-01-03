@@ -11,3 +11,15 @@ b {
 i {
   font-style: italic;
 }
+
+::selection {
+  color: color(ambient, dark);
+  background: color(brand, yellow);
+}
+
+.horizontal-line {
+  display: block;
+  height: 1px;
+  background: #EBECF0;
+  width: 100%;
+}

@@ -1,17 +1,18 @@
 $color-brightness-step: 10%;
 
 $colors: (
-    base: (
-        base: rgb(14, 26, 42),
-        light: rgb(65, 208 ,255)
-    ),
-    ambient: (
-        base: rgb(111, 142, 192),
-        dark: rgb(51, 62, 80)
-    ),
-    brand: rgb(62, 187, 123),
-    warning: rgb(250, 40, 40),
-    error: rgb(217, 83, 79),
-    success: rgb(100, 255, 100),
-    info: rgb(246, 199, 36)
+  base: (
+    base: rgb(9, 30, 66),
+    light: rgb(193, 199, 208),
+    lighter: rgb(223, 225, 229)
+  ),
+  ambient: (
+    light: rgb(255, 255, 255),
+    base: rgb(250, 251, 252),
+    dark: rgb(0, 0, 0)
+  ),
+  brand: (
+    blue: rgb(0, 101, 255),
+    yellow: rgb(255, 212, 0)
+  )
 );
